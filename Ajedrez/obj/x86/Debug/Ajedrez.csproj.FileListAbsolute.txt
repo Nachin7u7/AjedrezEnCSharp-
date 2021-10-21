@@ -1,0 +1,4 @@
+C:\Users\RYZEN\Documents\Projects\Ajedrez\Ajedrez\bin\Debug\Ajedrez.exe
+C:\Users\RYZEN\Documents\Projects\Ajedrez\Ajedrez\bin\Debug\Ajedrez.pdb
+C:\Users\RYZEN\Documents\Projects\Ajedrez\Ajedrez\obj\x86\Debug\Ajedrez.exe
+C:\Users\RYZEN\Documents\Projects\Ajedrez\Ajedrez\obj\x86\Debug\Ajedrez.pdb
