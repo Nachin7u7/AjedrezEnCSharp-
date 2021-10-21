@@ -8,7 +8,7 @@ namespace Ajedrez
 {
 	class Peon:FichaAjedrez
 	{
-		public Peon(string Color)
+		public Peon(string Color) //"PN, PB"
 		{
 			ColorFicha = Color;
 		}
@@ -24,6 +24,7 @@ namespace Ajedrez
 		{
 			return false;
 		}
+
 
 
 	}

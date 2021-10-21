@@ -11,7 +11,7 @@ namespace Ajedrez
 		static void Main(string[] args)
 		{
 			char seguir;
-			string[,] tablero = new string[8, 8];
+			string[,] tablero = new string[8, 8]; 
 			Peon peonBlanco = new Peon("PB");
 			Peon peonNegro = new Peon("PN");
 			Torre torreBlanca = new Torre("TB");
@@ -169,19 +169,23 @@ namespace Ajedrez
 						break;
 					}
 
-					// TODO
-//					double aux = Math.Pow((columna-columnaD),2);
-//					aux = Math.Pow(aux,(1/2));
-//					Console.WriteLine(aux);
+					//Movimiento del Peon
+					double aux =(fila-filaD);
+					aux = Math.Pow(aux,2);
+					aux = Math.Pow(aux,0.5); //|(columna-columnaD)| -> sqrt((columna-columnaD)^2)
 
-//					if(tablero[fila, columna] == "PN" && aux <= 1){
-//						tablero[filaD, columnaD] = tablero[fila, columna];
-//					}else if(tablero[fila, columna] == "PB" && aux <= 1){
-//						tablero[filaD, columnaD] = tablero[fila, columna];
-//					}else{
-//						Console.WriteLine("Movimiento inválido");
-//						break;
-//					}
+					if(tablero[fila, columna] == "PN" && aux <= 1){
+						tablero[filaD, columnaD] = tablero[fila, columna];
+
+					}else if(tablero[fila, columna] == "PB" && aux <= 1){
+						tablero[filaD, columnaD] = tablero[fila, columna];
+
+					}else{
+						Console.WriteLine("Movimiento inválido");
+						break;
+					}
+
+
 
 
 					//tablero[filaD, columnaD] = tablero[fila, columna];
@@ -201,7 +205,6 @@ namespace Ajedrez
 						}
 						Console.WriteLine();
 						Console.WriteLine();
-
 					}
 
 				}
