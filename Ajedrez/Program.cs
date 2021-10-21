@@ -86,7 +86,7 @@ namespace Ajedrez
 
 			do
 			{
-				for(int i =0 ; i<=1 ; i++){
+				for(int i = 0 ; i<=1 ; i++){
 					
 					if(i==0)
 						Console.WriteLine("Turno de blancas");
@@ -102,7 +102,7 @@ namespace Ajedrez
 					fila = Math.Abs(movida[0] - 48 - 8);
 					filaD = Math.Abs(destino[0] - 48 - 8);
 
-					switch (destino[1])
+					switch (destino[1]) //2A
 					{
 					case 'A':
 						columnaD = 0;
@@ -127,7 +127,7 @@ namespace Ajedrez
 						break;
 					case 'H':
 						columnaD = 7;
-						break;
+						break; 
 					}
 
 					switch (movida[1])
@@ -169,8 +169,22 @@ namespace Ajedrez
 						break;
 					}
 
+					// TODO
+//					double aux = Math.Pow((columna-columnaD),2);
+//					aux = Math.Pow(aux,(1/2));
+//					Console.WriteLine(aux);
 
-					tablero[filaD, columnaD] = tablero[fila, columna];
+//					if(tablero[fila, columna] == "PN" && aux <= 1){
+//						tablero[filaD, columnaD] = tablero[fila, columna];
+//					}else if(tablero[fila, columna] == "PB" && aux <= 1){
+//						tablero[filaD, columnaD] = tablero[fila, columna];
+//					}else{
+//						Console.WriteLine("Movimiento inválido");
+//						break;
+//					}
+
+
+					//tablero[filaD, columnaD] = tablero[fila, columna];
 					if ((fila + columna) % 2 == 0)
 						tablero[fila, columna] = ((char)15).ToString() + ((char)15).ToString();
 					else
@@ -190,8 +204,6 @@ namespace Ajedrez
 
 					}
 
-
-					//Console.ReadKey();
 				}
 				Console.WriteLine("Continuar (S/N):");
 				seguir = char.Parse(Console.ReadLine());
